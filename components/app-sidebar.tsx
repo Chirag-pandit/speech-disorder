@@ -13,13 +13,9 @@ import {
   Music,
   Settings,
 } from "lucide-react"
-import { Sidebar, SidebarContent, SidebarMenu, SidebarMenuItem, SidebarMenuButton } from "@/components/ui/sidebar"
-import { cn } from "@/lib/utils"
-import { usePathname } from "next/navigation"
+import { Sidebar } from "@/components/UI/Sidebar"
 
 export function AppSidebar() {
-  const pathname = usePathname()
-
   const menuItems = [
     { icon: Home, label: "Dashboard", href: "/" },
     { icon: Eye, label: "Recognition", href: "/recognition" },
@@ -49,27 +45,14 @@ export function AppSidebar() {
         </button>
       </div>
 
-      <SidebarContent>
-        <SidebarMenu>
-          {menuItems.map((item, index) => (
-            <SidebarMenuItem key={index}>
-              <SidebarMenuButton
-                asChild
-                isActive={item.active}
-                className={cn(
-                  "h-10 gap-4 rounded-lg",
-                  item.active ? "bg-[#F8E1F0] text-[#E94D97]" : "hover:bg-[#FFF5FA] hover:text-[#E94D97]",
-                )}
-              >
-                <a href={item.href}>
-                  <item.ImageIcon className="w-5 h-5" />
-                  <span>{item.label}</span>
-                </a>
-              </SidebarMenuButton>
-            </SidebarMenuItem>
-          ))}
-        </SidebarMenu>
-      </SidebarContent>
+      <div className="p-4">
+        {menuItems.map((item, index) => (
+          <a href={item.href} key={index} className={`flex items-center gap-4 h-10 rounded-lg px-2 mb-2 ${item.active ? "bg-[#F8E1F0] text-[#E94D97]" : "hover:bg-[#FFF5FA] hover:text-[#E94D97]"}`}>
+            <item.icon className="w-5 h-5" />
+            <span>{item.label}</span>
+          </a>
+        ))}
+      </div>
     </Sidebar>
   )
 }

@@ -19,7 +19,7 @@ const StatsCard: React.FC<StatsCardProps> = ({ title, value, subtitle, color = "
   }
 
   return (
-    <Card hover>
+    <Card className="hover:shadow-lg transition-shadow">
       <CardContent className="p-6 text-center">
         {icon && <div className="flex justify-center mb-3">{icon}</div>}
         <h3 className="text-lg font-semibold text-text-primary mb-2">{title}</h3>

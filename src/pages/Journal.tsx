@@ -219,7 +219,7 @@ const Journal: React.FC = () => {
 
             {/* Journal Entries */}
             <motion.div className="space-y-6" variants={containerVariants}>
-              {journalEntries.map((entry, index) => (
+              {journalEntries.map((entry) => (
                 <motion.div key={entry.id} variants={entryVariants}>
                   <motion.div
                     className="bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl border-0 p-6 hover:shadow-2xl transition-all duration-300 cursor-pointer group"

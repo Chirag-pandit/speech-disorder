@@ -52,7 +52,7 @@ const QuickActions: React.FC = () => {
       {actions.map((action) => {
         const Icon = action.icon
         return (
-          <Card key={action.id} hover className="group cursor-pointer" onClick={() => handleActionClick(action.id)}>
+          <Card key={action.id} className="group cursor-pointer hover:shadow-lg transition-shadow" onClick={() => handleActionClick(action.id)}>
             <CardContent className="p-6 text-center">
               <div
                 className={`w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 transition-colors ${action.color} ${action.hoverColor}`}

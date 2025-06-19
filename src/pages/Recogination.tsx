@@ -91,7 +91,6 @@ const VoiceRecognition: React.FC = () => {
   const [audioUrl, setAudioUrl] = useState<string>("")
 
   const intervalRef = useRef<NodeJS.Timeout | null>(null)
-  const waveformRef = useRef<NodeJS.Timeout | null>(null)
   const recognitionRef = useRef<SpeechRecognition | null>(null)
   const mediaRecorderRef = useRef<MediaRecorder | null>(null)
   const audioContextRef = useRef<AudioContext | null>(null)

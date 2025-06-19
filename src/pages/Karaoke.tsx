@@ -27,7 +27,7 @@ const KaraokeTherapy: React.FC = () => {
   const [isPlaying, setIsPlaying] = useState(false)
   const [isRecording, setIsRecording] = useState(false)
   const [currentTime, setCurrentTime] = useState(0)
-  const [duration, setDuration] = useState(180) // 3 minutes
+  const [duration] = useState(180) // 3 minutes
   const [volume, setVolume] = useState(75)
   const [isMuted, setIsMuted] = useState(false)
   const [selectedSong, setSelectedSong] = useState(0)
@@ -35,7 +35,6 @@ const KaraokeTherapy: React.FC = () => {
   const [currentLine, setCurrentLine] = useState(0)
   const [score, setScore] = useState(0)
   const [streak, setStreak] = useState(0)
-  const [difficulty, setDifficulty] = useState("beginner")
 
   const songs = [
     {

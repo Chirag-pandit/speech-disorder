@@ -180,7 +180,7 @@ export default function SpeechPractice() {
   const [currentRoleplayIndex, setCurrentRoleplayIndex] = useState(0)
   const [currentConversationStep, setCurrentConversationStep] = useState(0)
   const [score, setScore] = useState(0)
-  const [streak, setStreak] = useState(5)
+  const [streak] = useState(5)
   const [cameraActive, setCameraActive] = useState(false)
   const [balloons, setBalloons] = useState(["🎈", "🎈", "🎈", "🎈", "🎈"])
   const [candles, setCandles] = useState(["🕯️", "🕯️", "🕯️"])
@@ -555,7 +555,7 @@ export default function SpeechPractice() {
   }, [])
 
   // Recording Controls Component
-  const RecordingControls = ({ context }: { context: string }) => (
+  const RecordingControls = () => (
     <div className="flex flex-col items-center gap-3 sm:gap-4">
       {!isRecording && !isProcessing ? (
         <Button
@@ -777,7 +777,7 @@ export default function SpeechPractice() {
                     Listen to Word
                   </Button>
 
-                  <RecordingControls context="articulation" />
+                  <RecordingControls />
 
                   <div className="flex flex-col sm:flex-row gap-2 w-full sm:w-auto">
                     <Button
@@ -865,7 +865,7 @@ export default function SpeechPractice() {
                     Listen to Phrase
                   </Button>
 
-                  <RecordingControls context="repetition" />
+                  <RecordingControls />
 
                   <Button
                     onClick={nextPhrase}
@@ -1099,7 +1099,7 @@ export default function SpeechPractice() {
                 </div>
 
                 <div className="flex flex-col items-center gap-3 sm:gap-4">
-                  <RecordingControls context="stories" />
+                  <RecordingControls />
 
                   <Button
                     className="bg-orange-500 hover:bg-orange-600 text-white w-full sm:w-auto text-sm sm:text-base"
@@ -1181,7 +1181,7 @@ export default function SpeechPractice() {
 
                 <div className="flex flex-col items-center gap-3 sm:gap-4">
                   {roleplays[currentRoleplayIndex].conversation[currentConversationStep]?.speaker === "user" && (
-                    <RecordingControls context="roleplay" />
+                    <RecordingControls />
                   )}
 
                   {audioURL &&

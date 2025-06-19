@@ -73,7 +73,7 @@ const SpeechChat: React.FC = () => {
   const [selectedChat, setSelectedChat] = useState(0)
   const [message, setMessage] = useState("")
   const [isTyping, setIsTyping] = useState(false)
-  const [onlineUsers, setOnlineUsers] = useState(24)
+  const [onlineUsers] = useState(24)
   const [isVoiceCall, setIsVoiceCall] = useState(false)
   const [isVideoCall, setIsVideoCall] = useState(false)
   const [isMuted, setIsMuted] = useState(false)

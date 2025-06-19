@@ -1,4 +1,3 @@
-import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { AppSidebar } from './components/AppSidebar';
 import Dashboard from './pages/Dashboard';
@@ -8,28 +7,9 @@ import Journal from './pages/Journal';
 import Reminder from './pages/Reminder';
 import Progress from './pages/Progress';
 import Settings from './pages/Settings';
-import KaraokeTherapy from './pages/karaoke';
-import Chat from './pages/chat';
-import VoiceRecognition from './pages/recogination';
-
-// Demo pages with long content to test scrolling
-const Recognition = () => (
-  <div className="p-8">
-    <h1 className="text-3xl font-bold text-gray-800 mb-4">Recognition</h1>
-    <p className="text-gray-600 mb-8">Recognition features and tools.</p>
-    
-    <div className="space-y-6">
-      {Array.from({ length: 15 }, (_, i) => (
-        <div key={i} className="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
-          <h3 className="text-lg font-semibold text-gray-800 mb-2">Recognition Feature {i + 1}</h3>
-          <p className="text-gray-600">
-            Advanced recognition capabilities for better care management. Test scrolling with long content.
-          </p>
-        </div>
-      ))}
-    </div>
-  </div>
-);
+import KaraokeTherapy from './pages/Karaoke';
+import Chat from './pages/Chat';
+import VoiceRecognition from './pages/Recogination';
 
 function App() {
   return (

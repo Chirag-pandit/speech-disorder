@@ -1932,7 +1932,7 @@ const Reminder: React.FC = () => {
         {/* Main Content */}
         {showCreateForm ? (
           <ReminderForm
-            onSave={(reminder) => {
+            onSave={() => {
               createReminder()
               setShowCreateForm(false)
             }}

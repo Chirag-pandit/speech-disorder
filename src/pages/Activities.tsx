@@ -118,14 +118,6 @@ const slideInVariants = {
   },
 }
 
-const fadeInVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: { duration: 0.4 },
-  },
-}
-
 const modalVariants = {
   hidden: {
     opacity: 0,
@@ -852,9 +844,9 @@ const Activities: React.FC = () => {
               },
             }}
           >
-            {userStats.achievements.map((achievement, index) => (
+            {userStats.achievements.map((achievement) => (
               <motion.div
-                key={index}
+                key={achievement}
                 className="bg-gradient-to-r from-yellow-100 to-yellow-200 text-yellow-800 px-3 py-1 rounded-full text-sm font-medium border border-yellow-300"
                 variants={{
                   hidden: { opacity: 0, scale: 0.8 },
@@ -1245,7 +1237,7 @@ const Activities: React.FC = () => {
                   },
                 }}
               >
-                {activities.map((activity, index) => (
+                {activities.map((activity) => (
                   <motion.div key={activity.id} variants={cardVariants} whileHover="hover" whileTap="tap">
                     <Card className="bg-white shadow-sm hover:shadow-lg transition-all duration-300 cursor-pointer overflow-hidden">
                       <CardContent className="p-6">
